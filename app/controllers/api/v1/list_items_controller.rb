@@ -8,6 +8,7 @@ class Api::V1::ListItemsController < ApplicationController
 
     def new
         @list_item = ListItem.new 
+        render json: @list_item, status: :accepted
     end 
 
     def create

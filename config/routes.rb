@@ -7,9 +7,9 @@ Rails.application.routes.draw do
       resources :locations
       resources :trips
       resources :list_items
-      resources :users, only: [:create]
-      post '/login', to: 'auth#create'
-      get '/profile', to: 'users#profile'
+      resources :users
+      post '/users/login', to: 'users#login'
+      # get '/profile', to: 'users#profile'
     end 
   end 
 end

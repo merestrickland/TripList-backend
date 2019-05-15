@@ -9,6 +9,14 @@ class Api::V1::UsersController < ApplicationController
         end 
     end 
 
+    def show
+        @user = User.find(params[:id])
+        render json: @user 
+    end
+
+    def login
+    end 
+
     private
 
     def user_params 

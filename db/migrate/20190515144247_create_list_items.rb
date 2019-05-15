@@ -4,6 +4,7 @@ class CreateListItems < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :description
       t.string :img_url
+      t.integer :trip_id
 
       t.timestamps
     end

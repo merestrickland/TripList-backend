@@ -1,3 +1,5 @@
 class ListItemSerializer < ActiveModel::Serializer
-  attributes :id, :name, :description, :img_url
+  belongs_to :trip
+  belongs_to :user
+  attributes :id, :name, :description, :image_url
 end

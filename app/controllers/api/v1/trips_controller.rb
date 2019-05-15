@@ -1,5 +1,5 @@
 class Api::V1::TripsController < ApplicationController
-    before_action :find_note, only: [:update]
+    before_action :find_trip, only: [:update]
 
     def index
         @trips = Trip.all 
@@ -11,6 +11,11 @@ class Api::V1::TripsController < ApplicationController
         render json: @trip, status: :accepted
     end
 
+    def create
+        @trip = Trip.create(trip_params)
+        render json: @trip, status: :accepted 
+    end 
+
     def update 
         @trip.update(trip_params)
         if @trip.save
@@ -20,12 +25,14 @@ class Api::V1::TripsController < ApplicationController
         end
     end
 
+   
+
+    private
+    
     def find_trip
         @trip = Trip.find(params[:id])
     end
 
-    private
-    
     def trip_params
         params.permit(:name)
     end

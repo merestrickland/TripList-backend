@@ -16,10 +16,10 @@ Trip.destroy_all
 meredith = User.create!(first_name: 'Meredith', last_name: 'Strickland', email: 'mere.strickland@gmail.com', password: 'hi')
 
 #Locations
-nyc = Trip.create!(name: 'New York City', coordinates: '40.7128, -74.0060')
+nyc = Location.create!(name: 'New York City', coordinates: '40.7128, -74.0060')
 
 #Trips
 nyc_mere = Trip.create!(name: 'Mere <3 NY', location_id: nyc.id, user_id: meredith.id)
 
 #ListItems
-ListItem.create!(name: 'Noguchi Museum', description: 'museum housing Noguchi sculptures featuring a sculpture garden', image_url: 'https://www.noguchi.org/sites/default/files/collection/vic1.jpg?1287004287')
+ListItem.create!(name: 'Noguchi Museum', description: 'museum housing Noguchi sculptures featuring a sculpture garden', image_url: 'https://www.noguchi.org/sites/default/files/collection/vic1.jpg?1287004287', trip_id: nyc_mere.id)
