@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_15_144355) do
+ActiveRecord::Schema.define(version: 2019_05_16_154153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,10 +18,12 @@ ActiveRecord::Schema.define(version: 2019_05_15_144355) do
   create_table "list_items", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "image_url"
+    t.string "img_url"
     t.integer "trip_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "category"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -33,8 +35,8 @@ ActiveRecord::Schema.define(version: 2019_05_15_144355) do
 
   create_table "trips", force: :cascade do |t|
     t.string "name"
-    t.integer "user_id"
     t.integer "location_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

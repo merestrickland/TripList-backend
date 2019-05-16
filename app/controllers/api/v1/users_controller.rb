@@ -15,6 +15,15 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def login
+        #Check to see if the email and password is in the database
+        #if it is, render the appropriate JSON
+        @user = User.find_by(email: params[:email])
+        if @user && @user.authenticate(params[:password])
+            token = encode_token({ user_id: @user.id })
+            render json: { user: UserSerializer.new(@user), token: token}
+        else
+            render json: { message: 'Invalid email or password' }
+        end
     end 
 
     private
