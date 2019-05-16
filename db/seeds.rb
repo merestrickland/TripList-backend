@@ -22,4 +22,4 @@ nyc = Location.create!(name: 'New York City', coordinates: '40.7128, -74.0060')
 nyc_mere = Trip.create!(name: 'Mere <3 NY', location_id: nyc.id, user_id: meredith.id)
 
 #ListItems
-ListItem.create!(name: 'Noguchi Museum', description: 'museum housing Noguchi sculptures featuring a sculpture garden', image_url: 'https://www.noguchi.org/sites/default/files/collection/vic1.jpg?1287004287', trip_id: nyc_mere.id)
+ListItem.create!(name: 'Noguchi Museum', description: 'museum housing Noguchi pieces featuring a sculpture garden', img_url: 'https://www.noguchi.org/sites/default/files/collection/vic1.jpg?1287004287', category: 'activity', trip_id: nyc_mere.id, user_id: meredith.id)

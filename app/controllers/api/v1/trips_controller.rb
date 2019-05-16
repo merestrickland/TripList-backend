@@ -1,5 +1,6 @@
 class Api::V1::TripsController < ApplicationController
-    before_action :find_trip, only: [:update]
+    # before_action :find_trip, only: [:update]
+    before_action :authorized, only: [:create]
 
     def index
         @trips = Trip.all 
