@@ -13,7 +13,7 @@ Trip.destroy_all
 
 
 #Users
-meredith = User.create!(first_name: 'Meredith', last_name: 'Strickland', email: 'mere.strickland@gmail.com', password: 'hi')
+meredith = User.create!(first_name: 'Meredith', last_name: 'Strickland', email: 'sugasuga@suga.com', password: 'hi')
 jael = User.create!(first_name: 'Jael', last_name: 'McCants', email: 'jael@hi.com', password: 'hi' )
 sadijia = User.create!(first_name: 'Sadijia', last_name: 'Bené', email: 'sadijia@hi.com', password: 'hi')
 jamez = User.create!(first_name: 'James', last_name: 'Front Door', email: 'james@hi.com', password: 'hi')

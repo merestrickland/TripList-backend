@@ -9,7 +9,9 @@ Rails.application.routes.draw do
       resources :list_items
       resources :users
       post '/login', to: 'users#login'
-      # get '/profile', to: 'users#profile'
+      post '/users', to: 'users#create'
+      get '/profile', to: 'users#profile'
+      get '/autologin', to: 'users#autologin'
     end 
   end 
 end

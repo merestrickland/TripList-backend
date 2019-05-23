@@ -32,6 +32,10 @@ class Api::V1::UsersController < ApplicationController
         end
     end 
 
+    def autologin
+        render json: { user: UserSerializer.new(current_user) }
+    end 
+
     private
 
     def user_params 
