@@ -14,6 +14,7 @@ class Api::V1::TripsController < ApplicationController
 
     def create
         @trip = Trip.create(trip_params)
+        # byebug
         render json: @trip, status: :accepted 
     end 
 
@@ -26,6 +27,12 @@ class Api::V1::TripsController < ApplicationController
         end
     end
 
+    def destroy 
+        @trip = Trip.find(params[:id])
+        @trip.destroy
+        render json: {messages: 'this worked'}
+    end
+
    
 
     private
@@ -35,7 +42,7 @@ class Api::V1::TripsController < ApplicationController
     end
 
     def trip_params
-        params.permit(:name)
+        params.permit(:name, :location, :user_id)
     end
     
 end

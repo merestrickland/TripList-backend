@@ -26,16 +26,9 @@ ActiveRecord::Schema.define(version: 2019_05_16_154153) do
     t.string "category"
   end
 
-  create_table "locations", force: :cascade do |t|
-    t.string "name"
-    t.string "coordinates"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "trips", force: :cascade do |t|
     t.string "name"
-    t.integer "location_id"
+    t.string "location"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
