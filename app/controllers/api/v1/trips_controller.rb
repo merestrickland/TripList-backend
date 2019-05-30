@@ -7,6 +7,11 @@ class Api::V1::TripsController < ApplicationController
         render json: @trips 
     end
 
+    def show
+        @trip = Trip.find(params[:id])
+        render json: @trip 
+    end
+
     def new
         @trip = Trip.new
         render json: @trip, status: :accepted
