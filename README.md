@@ -1,25 +1,25 @@
-# README
+## TripList
+TripList is a web application that allows a user to plan trips for themselves, or share trips with others. Itinerary items are split into categories including where to eat, where to drink, and things to do.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Motivation
+This project exists because of how often I have people asking for my recommendations in cities they will visit. On TripList, you can search for users and easily see what items they recommend for trips they have been on.
 
-Things you may want to cover:
+## Link to Demo Video
+https://www.youtube.com/watch?v=D8qmIOkQbvY
 
-* Ruby version
+## Screenshots
+![alt text](https://github.com/merestrickland/final-frontend/blob/master/images/TripListScreenshot.png "TripList Screenshot")
 
-* System dependencies
+![alt text](https://github.com/merestrickland/final-frontend/blob/master/images/TripList%20Screenshot2.png "TripList Screenshot")
 
-* Configuration
+## Tech/framework used
+Built with Ruby on Rails
 
-* Database creation
+## Front End Reference
+https://github.com/merestrickland/TripList-frontend
 
-* Database initialization
+## Available Scripts
 
-* How to run the test suite
+In the project directory, you can run:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# final-backend
+### `rails s -p 3005`
